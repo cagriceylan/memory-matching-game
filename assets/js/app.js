@@ -14,8 +14,7 @@ const app7 = Vue.createApp({
             counter: 0,
             firstclick: true,
 
-            html: '<p><span id="seconds">00</span>:<span id="tens">00</span></p>',
-            htmlgame: 'oyun bitti',
+            html: '<span id="seconds">00</span>:<span id="tens">00</span>',
             seconds: 00,
             tens: 00,
             Interval: '',
@@ -126,6 +125,7 @@ const app7 = Vue.createApp({
         }, 
 
         stopTime: function(){
+            this.html = "congratulations, you finished this game just " + this.html + " seconds!";
             clearInterval(this.Interval);
         },
 
@@ -145,7 +145,7 @@ const app7 = Vue.createApp({
             if (this.tens > 99) {
               console.log("seconds");
               this.seconds++;
-              this.html = '<p><span id="seconds">'+this.seconds+'</span>:<span id="tens">00</span></p>';
+              this.html = ' <span id="seconds">'+this.seconds+'</span>:<span id="tens">00</span> ';
               this.appendSeconds = "0" + this.seconds;
               this.tens = 0;
               this.appendTens = "0" + 0;
@@ -155,7 +155,7 @@ const app7 = Vue.createApp({
                 this.appendSeconds = this.seconds;
             }
           
-          }
+        }
           
     },
     created(){

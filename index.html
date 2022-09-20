@@ -2,7 +2,7 @@
 <html lang="tr">
 
 <head>
-  <title>kART EŞLEŞTİRME OYUNU</title>
+  <title>CARD MATCHING GAME</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,14 +13,6 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- FAV İCON -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-
-  <!--GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/vue@3"></script>
 
@@ -34,14 +26,14 @@
     <!-- EXAMPLE7-->
     <div class="container" id="kapsayici7" >
 
-      <div class="row bg-blue  py-5 my-5 text-white">
+      <div class="row bg-dark-transparent py-5 my-2 text-white">
         <div class="col-md-12">
-          <h1 class="text-center" style="color: white !important;">kart eşleştirme oyunu</h1>
+          <h5 class="text-center" style="color: white !important;">MEMORY CARD MATCHING GAME</h5>
         </div>
-        <div class="col-md-10 mx-auto bg-blue" v-html="html" style="font-size: 30px !important;"></div>
-        <div class="col-md-10 mx-auto bg-blue">
+        <div class="col-md-10 mx-auto bg-dark-transparent" v-html="html" style="font-size: 15px !important; text-align: center;"></div>
+        <div class="col-md-10 mx-auto bg-dark-transparent">
           <div class="row">
-            <div class="col-md-3 border py-3 text-white" v-for="(say, index) in arr_Black">
+            <div class="col-md-3 border py-3 text-white card" v-for="(say, index) in arr_Black">
               <a class="gamebtn w-100" v-on:click="renderHtml(index)"><img class="w-100" v-bind:src="'assets/images/' + say + '.png'" /></a>
             </div>
           </div>
